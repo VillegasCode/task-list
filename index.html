@@ -8,10 +8,30 @@
         <title>Task List | VillegasCode</title>
     </head>
     <body>
-        <ing src="./images/VillegasCode-logo.png" alt="logo" class="logo">
-        <h1>VillegasCode</h1>
+        <img src="./images/VillegasCode-logo.png" alt="logo" class="logo">
         
+        <h1>Task List</h1>
         
+        <!-- Formulario para definir agregar los campos y hacer los envíos -->
+        <form action="#" id="userInput">
+            <!-- Agregamos un textBox para que escriban sus tareas -->
+            <input type="text" placeholder="Escribe tu tarea aquí..." autofocus>
+            <!-- Agregamos el botón para enviar el valor que pusimos en el textBox -->
+            <input type="submit" value="+" id="addBtn">
+        </form>
+
+        <!-- Creamos una lista como contenedor de las tareas que vamos creando -->
+        <div id = "list" class="list-container">
+            <div id="1" class="task-container">
+                <!-- Agregamos una etiqueta con su respectivo checkbox -->
+                <label>
+                    <input type="checkbox">
+                    Tarea 1
+                </label>
+                <img src="./images/bin.png" class="closeBtn">
+            </div>
+        </div>
+
         <script src="./main.js"></script>
     </body>
 </html>
