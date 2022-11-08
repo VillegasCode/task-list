@@ -1,0 +1,27 @@
+/* Creamos Variables en CSS */
+root{
+    --orange: #d95550;
+    --lightOrange: #dd6662;
+    --veryLightOrange: #f89e8b;
+    --gray: #55557b;
+    --white: #fff;
+}
+
+/*Configuramos de forma universal con un * */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/*Configuramos la etiqueta body y usamos las variables creadas previamente */
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    background-color: var(--orange);
+}
+
+.logo{
+    width: 300px;
+    position: absolute;
+    top: 0px;
+    right: 30px;
+}
