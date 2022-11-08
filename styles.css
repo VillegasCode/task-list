@@ -50,3 +50,8 @@ form input[type="text"]{
 form input[type="text"]::placeholder{
     color: var(--veryLightOrange);
 }
+
+/* El contorno del textbox cuando está en foco lo quitamos */
+form input[type="text"]:focus{
+    outline: none;
+}
