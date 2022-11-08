@@ -55,3 +55,66 @@ form input[type="text"]::placeholder{
 form input[type="text"]:focus{
     outline: none;
 }
+
+/* Volviendo redondo al botón submit configurando su width height color radius */
+form input[type="submit"]{
+    font-size: 2em;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border-style: none;
+    /* Le pone color al texto + */
+    color: var(--orange);
+}
+
+/* Al pasar el mouse por encima del botón le cambiamos el color del botón*/
+form input[type="submit"]:hover{
+    background-color: var(--veryLightOrange);
+    /* Cambiamos el tipo de puntero del mouse */
+    cursor: pointer;
+    /* Cambiamos el color del texto a blanco */
+    color: var(--white);
+}
+
+.list-container{
+    width: 400px;
+    margin: 0 auto;
+}
+
+.task-container{
+    /* Color de fondo del contenedor */
+    background-color: var(--white);
+    /* Display flex es para que se ordenen todos lox elementos de forma automática */
+    display: flex;
+    /* Para separar los elementos entre sí (entre la tarea y el icono del basurero)*/
+    justify-content: space-between;
+    /* Añadimos espacio entre cada tarea */
+    margin-bottom: 6px;
+    padding: 16px;
+    /* Volvemos el botón redondo */
+    border-radius: 4px;
+    /*Tamaño de la fuente */
+    font-size: 1.1em;
+    /* Grosor de la letra */
+    font-weight: 500;
+    /* Color del texto */
+    color: var(--gray);
+}
+
+/* Modificar el tamaño de la imagen del basurero llamaod bin o delete de la clase  Closebtn*/
+.closeBtn {
+    width: 15px;
+    height: 15px;
+}
+
+/* Cambiamos de imagen al cursor en vez de flecha usamos un puntero */
+.closeBtn:hover {
+    cursor: pointer;
+}
+
+#stats {
+    margin-top: 25px;
+    font-size: 1.3em;
+    color: var(--veryLightOrange);
+    text-align: center;
+}
