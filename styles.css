@@ -1,5 +1,5 @@
-/* Creamos Variables en CSS */
-root{
+/* Creamos Variables en CSS con :root */
+:root{
     --orange: #d95550;
     --lightOrange: #dd6662;
     --veryLightOrange: #f89e8b;
@@ -20,8 +20,33 @@ body{
 }
 
 .logo{
-    width: 300px;
+    width: 100px;
     position: absolute;
     top: 0px;
     right: 30px;
+}
+
+h1{
+    margin-top: 200px;
+    color: var(--white);
+    text-align: center;
+}
+
+form{
+    width: 400px;
+    margin: 45px auto;
+    text-align: center;
+}
+
+/* Le coloca color de fondo al textbox y a la letra le coloca color blanco */
+form input[type="text"]{
+    background-color: var(--orange);
+    color: var(--white);
+    border-style: none;
+    font-size: 1.5em;
+}
+
+/* Le cambia el color al placeholder del textbox */
+form input[type="text"]::placeholder{
+    color: var(--veryLightOrange);
 }
