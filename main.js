@@ -30,4 +30,30 @@ let addTask = ()=>{
                 <img src="./images/bin.png" class="closeBtn">
             </div>
             `
+    
+    //El textbox lo borramos dándole un valor vacío
+            input.value = '';
+    
+            //Creamos una funciçon llamada updateStats
+            updateStats();
+};
+
+list.addEventListener('click', (event)=>{
+    if (event.srcElement.nodeName == 'INPUT'){
+        updateStats();
+    } else if (event.srcElement.nodeName == 'IMG') {
+        deleteTask(event.srcElement.parentNode.id);
+    }
+});
+
+let updateStats = ()=>{
+    let element = list.querySelectorAll('div');
+    let checkbox = list.querySelectorAll('input[type="checkbox"]:checked');
+    stats.innerHTML = `<p>Tareas pendientes: ${element.length} Completadas: ${checkbox.length}</p>`
+}
+
+let deleteTask = (id) => {
+    let taskToDelete = document.getElementById(id);
+    list.removeChild(taskToDelete);
+    updateStats();
 }
