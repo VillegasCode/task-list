@@ -15,6 +15,8 @@ userInput.addEventListener('submit', (event)=>{
 let addTask = ()=>{
     //Contador de id se suma así mismo cada vez que se llama a la función
     IdCounter++;
+    
+    if (input.value !== '') {
 
     //Almacenamos el valor del input type text(lo que escribimos) en la variable newValue
     let newValue = input.value;
@@ -36,6 +38,10 @@ let addTask = ()=>{
     
             //Creamos una funciçon llamada updateStats
             updateStats();
+        }
+        else  {
+            alert("Ingresa una tarea");
+        }
 };
 
 list.addEventListener('click', (event)=>{
