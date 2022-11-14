@@ -16,6 +16,7 @@ let addTask = ()=>{
     //Contador de id se suma así mismo cada vez que se llama a la función
     IdCounter++;
     
+    //Si el valor del textbox input es diferente a vacío, entonces debe almacenar el valor que se le ha escrito
     if (input.value !== '') {
 
     //Almacenamos el valor del input type text(lo que escribimos) en la variable newValue
@@ -40,7 +41,10 @@ let addTask = ()=>{
             updateStats();
         }
         else  {
+            //Si es que el textbox está vacío entonces no agregará nada, manadará una alerta y pondrá al textbox en foco
             alert("Ingresa una tarea");
+            const $tarea = document.querySelector("#tarea");
+            $tarea.focus();
         }
 };
 
