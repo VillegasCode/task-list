@@ -17,8 +17,8 @@ let addTask = ()=>{
     IdCounter++;
     
     //Si el valor del textbox input es diferente a vacío, entonces debe almacenar el valor que se le ha escrito
-    if (input.value !== '') {
-
+    if (input.value !== '' && input.length() > 3) {
+        console.write("Longitud: " + input.length());
     //Almacenamos el valor del input type text(lo que escribimos) en la variable newValue
     let newValue = input.value;
 
