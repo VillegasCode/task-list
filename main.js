@@ -17,8 +17,8 @@ let addTask = ()=>{
     IdCounter++;
     
     //Si el valor del textbox input es diferente a vacío, entonces debe almacenar el valor que se le ha escrito
-    if (input.value !== '' && input.length() > 3) {
-        console.write("Longitud: " + input.length());
+    if (input.value !== '' && input.value.length > 3) {
+        
     //Almacenamos el valor del input type text(lo que escribimos) en la variable newValue
     let newValue = input.value;
 
@@ -42,7 +42,7 @@ let addTask = ()=>{
         }
         else  {
             //Si es que el textbox está vacío entonces no agregará nada, manadará una alerta y pondrá al textbox en foco
-            alert("Ingresa una tarea");
+            alert("Ingresa una tarea (min: 4 caracteres)");
             const $tarea = document.querySelector("#tarea");
             $tarea.focus();
         }
