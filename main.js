@@ -48,6 +48,7 @@ let addTask = ()=>{
         }
 };
 
+//Con addEventListener puedes escuchar los eventos que se ejecutan en el HTML
 list.addEventListener('click', (event)=>{
     if (event.srcElement.nodeName == 'INPUT'){
         updateStats();
